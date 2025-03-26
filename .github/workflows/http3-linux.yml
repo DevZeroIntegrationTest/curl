@@ -57,7 +57,7 @@ env:
 
 jobs:
   build-cache:
-    runs-on: ubuntu-latest
+    runs-on: devzero-ubuntu-24.04
 
     steps:
       - name: 'cache quictls'
@@ -220,7 +220,7 @@ jobs:
     name: ${{ matrix.build.generate && 'CM' || 'AM' }} ${{ matrix.build.name }}
     needs:
       - build-cache
-    runs-on: 'ubuntu-latest'
+    runs-on: devzero-ubuntu-24.04
     timeout-minutes: 45
     strategy:
       fail-fast: false
